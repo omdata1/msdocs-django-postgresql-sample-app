@@ -26,7 +26,7 @@ SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
- DATABASES = {
+DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.postgresql',
          'NAME': os.environ['AZURE_POSTGRESQL_NAME'],
@@ -36,7 +36,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
      }
  }
 
- CACHES = {
+CACHES = {
          "default": {  
              "BACKEND": "django_redis.cache.RedisCache",
              "LOCATION": os.environ['AZURE_REDIS_CONNECTIONSTRING'],
